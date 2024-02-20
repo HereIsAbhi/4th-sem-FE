@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="myb">click me</button><br>
+    <p id="demo"></p>
+    <script>
+        // function myFunction(){
+        //     console.log("hy ...");
+        // }
+        // function myfn2(){
+        //     console.log("calling fn2..");
+        // }
+       
+        // mybutton.addEventListener('click',myFunction);
+        // mybutton.addEventListener('click',myfn2);
+        var c=document.getElementById("myb");
+        c.addEventListener("click",()=>{
+            c.style.backgroundColor="blue";
+            document.body.style.background="green";
+        });
+        c.addEventListener("click",()=>{
+            document.getElementById("demo").innerHTML="Text--";
+        })
+    </script>
+</body>
+</html>
+
+<!-- we can use addEventListener in both ways either by creating a fn separately or by just using arrow fn.
+by using add addEventListener we can add multiple events . -->
+
