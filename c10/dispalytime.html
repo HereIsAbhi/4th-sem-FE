@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>time</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <button class="start">START</button>
+    <button class="stop">STOP</button>
+    <h2 class="h2"></h2>
+    <script>
+        // let counter =0,c=5;
+        // const intervalId =setInterval(function(){
+        //     if(counter<=c){
+        //         document.getElementById('p1').innerHTML="Counter value is:"+counter;
+        //         counter++;
+        //     }
+        //     if(counter===4){
+        //         clearInterval(intervalId);
+        //     }
+        // },1000);
+        const start= document.querySelector('.start');
+        const stop=document.querySelector('.stop');
+        const h2=document.querySelector('h2');
+        let interval;
+        start.addEventListener('click',()=>{
+            interval=setInterval(()=>{
+                const now =new Date();
+                h2.textContent=`${now.getHours()}h: ${now.getMinutes()}m:${now.getSeconds()}s:${now.getMilliseconds()}ms`;
+            },1000)
+        })
+        stop.addEventListener('click',()=>{
+            clearInterval(interval);
+        })
+    </script>
+</body>
+</html>
