@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3></h3>
+    <script>
+        var e1=document.createElement('p');
+        var text =document.createTextNode("how r u?");
+        e1.appendChild(text);
+        document.body.appendChild(e1);
+    </script>
+    <h3>add element to parent element</h3>
+    <div id="one">
+        <p>hello</p>
+    </div>
+    <script>
+        var e2=document.createElement('p');
+        var text1=document.createTextNode("world! ");
+        var parent=document.getElementById("one");
+        e2.appendChild(text1);
+        parent.appendChild(e2);
+    </script>
+    <h3>
+        Insert element at specified position in parent using insertBefore
+        
+    </h3>
+    <div id="two">
+        <p id="p1">Welcome</p>
+        <p id="p2">to the</p>
+        <p id="p3">INT219</p>
+    </div>
+    <script>
+    var e3= document.createElement('p');
+    var text2=document.createTextNode("class of");
+    e3.appendChild(text2);
+    var parent= document.getElementById("two");
+    var child=document.getElementById("p3");
+    parent.insertBefore(e3,child);
+
+</script>
+<h3>Insert HTML content directly</h3>
+<div id="three">
+    <p>welcome</p>
+</div>
+<script>
+    var parent =document.getElementById('three');
+    // var child=document.createElement('p');
+    parent.innerHTML+='<p>New Content</p>';
+</script>
+<h3>Insert HTML at a specified position relative to the element</h3>
+<div id="four">
+    <p>welcome</p>
+</div>
+<script>
+    var parent =document.getElementById('four');
+    // var child=document.createElement('p');
+    parent.insertAdjacentHTML('beforeend','<p>New content</p>');
+</script>
+
+</body>
+</html>
